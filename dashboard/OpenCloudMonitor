@@ -1,0 +1,884 @@
+{
+  "id": 4,
+  "title": "OpenCloudMonitor  Dashboard",
+  "originalTitle": "OpenCloudMonitor  Dashboard",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": true,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 20,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.apache-web-status.apache_{connections,requests}, 3)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Apache Stats: $Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 19,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.apache-web-status.apache_scoreboard-{open,waiting,keepalive}, 3)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Apache ScoreBoard: $Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Apache Stats"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "thresholdLine": true
+          },
+          "id": 12,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "hideEmpty": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 1,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.load.load.*, 4)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Load on: $Server Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "none"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 16,
+          "leftYAxisLabel": "%",
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "rightYAxisLabel": "",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "hide": false,
+              "target": "aliasByNode(averageSeriesWithWildcards($Infra.$Server.cpu-*.cpu-{idle,user,system,wait}, 2), 2)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Average Usage: $Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "CPU Stats"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 2,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 18,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 1,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.disk-sd{a,b,c,d,e,f,g}.disk_ops.read, 2, 4)"
+            },
+            {
+              "target": "aliasByNode($Infra.$Server.disk-sd{a,b,c,d,e,f,g}.disk_ops.write, 2, 4)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Disk Ops $Server Servers",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(226, 138, 5, 0.02)",
+            "threshold2": null,
+            "threshold2Color": "rgba(245, 9, 9, 0.01)",
+            "thresholdLine": false
+          },
+          "id": 21,
+          "leftYAxisLabel": " %",
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 1,
+          "points": false,
+          "renderer": "flot",
+          "rightYAxisLabel": "",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.df-home.percent_bytes-used, 2)"
+            },
+            {
+              "target": "aliasByNode($Infra.$Server.df-root.percent_bytes-used, 2)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Disk Usage on $Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "short"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Disk Stats"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 14,
+          "leftYAxisLabel": "%",
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "rightYAxisLabel": "",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.memory.*, 3)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bytes",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 22,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.processes-*.ps_count.threads, 2,4)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Processes / Threads : $Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "none"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Memory / Processes Stats"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 15,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode(summarize($Infra.$Server.mysql-engine.mysql_commands-insert, '$Intervale', 'sum', false), 3)"
+            },
+            {
+              "target": "aliasByNode(summarize($Infra.$Server.mysql-engine.mysql_commands-lock_tables, '$Intervale', 'sum', false), 3)"
+            },
+            {
+              "target": "aliasByNode(summarize($Infra.$Server.mysql-engine.mysql_locks-waited, '$Intervale', 'sum', false), 3)"
+            },
+            {
+              "target": "aliasByNode(summarize($Infra.$Server.mysql-engine.mysql_commands-update, '$Intervale', 'sum', false), 3)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Mysql Graph on $Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 17,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "aliasByNode($Infra.$Server.interface-eth*.if_octets.rx, 2, 3, 4)"
+            },
+            {
+              "target": "aliasByNode(scale($Infra.$Server.interface-eth*.if_octets.tx, -1), 2, 3, 4)"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Network Usage : $Server",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "none"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Other Stats"
+    }
+  ],
+  "nav": [
+    {
+      "collapse": false,
+      "enable": true,
+      "notice": false,
+      "now": true,
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "status": "Stable",
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ],
+      "type": "timepicker"
+    }
+  ],
+  "time": {
+    "from": "now-1h",
+    "now": true,
+    "to": "now"
+  },
+  "templating": {
+    "enable": true,
+    "list": [
+      {
+        "allFormat": "wildcard",
+        "current": {
+        },
+        "datasource": null,
+        "includeAll": false,
+        "name": "Server",
+        "options": [
+        ],
+        "query": "$Infra.*",
+        "refresh": true,
+        "refresh_on_load": false,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "allFormat": "glob",
+        "auto": true,
+        "auto_count": 50,
+        "current": {
+          "text": "1m",
+          "value": "1m"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "name": "Intervale",
+        "options": [
+          {
+            "text": "auto",
+            "value": "$__auto_interval"
+          },
+          {
+            "text": "1m",
+            "value": "1m"
+          },
+          {
+            "text": "10m",
+            "value": "10m"
+          },
+          {
+            "text": "30m",
+            "value": "30m"
+          },
+          {
+            "text": "1h",
+            "value": "1h"
+          },
+          {
+            "text": "6h",
+            "value": "6h"
+          },
+          {
+            "text": "12h",
+            "value": "12h"
+          },
+          {
+            "text": "1d",
+            "value": "1d"
+          },
+          {
+            "text": "7d",
+            "value": "7d"
+          },
+          {
+            "text": "14d",
+            "value": "14d"
+          },
+          {
+            "text": "30d",
+            "value": "30d"
+          }
+        ],
+        "query": "1m,10m,30m,1h,6h,12h,1d,7d,14d,30d",
+        "refresh_on_load": false,
+        "type": "interval"
+      },
+      {
+        "allFormat": "glob",
+        "current": {
+          "text": "collectd",
+          "value": "collectd"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "name": "Infra",
+        "options": [
+          {
+            "text": "carbon",
+            "value": "carbon"
+          },
+          {
+            "text": "collectd",
+            "value": "collectd"
+          }
+        ],
+        "query": "*",
+        "refresh": true,
+        "refresh_on_load": false,
+        "type": "query"
+      }
+    ]
+  },
+  "annotations": {
+    "enable": true,
+    "list": []
+  },
+  "refresh": false,
+  "schemaVersion": 6,
+  "version": 19
+}
